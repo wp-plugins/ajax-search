@@ -15,6 +15,12 @@ class MXAjaxSearchWidget extends WP_Widget
   {
     $widget_ops = array('classname' => 'MXAjaxSearch', 'description' => 'Simple Ajax Search' );
     $this->WP_Widget('MXAjaxSearchWidget', 'Simple ajax Search', $widget_ops);
+
+    add_action('wp_enqueue_scripts',  function () {
+         wp_enqueue_script( 'jquery' );
+
+    });
+
   }
  
   function form($instance)
