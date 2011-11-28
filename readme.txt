@@ -20,10 +20,12 @@ Ajax Search is a simple instant posts search widget. In the results shows only p
 
 == Frequently Asked Questions ==
 
+No FAQ.
 
 
 == Screenshots ==
 
+No Screenshots.
 
 == Changelog ==
 
@@ -32,7 +34,7 @@ Ajax Search is a simple instant posts search widget. In the results shows only p
 
 
 == Upgrade Notice ==
-
+No Upgrade Notice. This is the first release.
 
 == Arbitrary section ==
 
