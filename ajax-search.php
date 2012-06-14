@@ -11,22 +11,33 @@ Author URI: http://sandorkovacs84.wordpress.com/
  
 class MXAjaxSearchWidget extends WP_Widget
 {
+
+  //  Init ajax search widget
   function MXAjaxSearchWidget()
   {
-    $widget_ops = array('classname' => 'MXAjaxSearch', 'description' => 'Simple Ajax Search' );
-    $this->WP_Widget('MXAjaxSearchWidget', 'Simple ajax Search', $widget_ops);
+    $widget_ops = array(
+      'classname'   => 'MXAjaxSearch', 
+      'description' => __('Simple Ajax Search')
+    );
+
+    $this->WP_Widget('MXAjaxSearchWidget', __('Simple ajax Search'), $widget_ops);
 
     add_action('wp_enqueue_scripts',  function () {
          wp_enqueue_script( 'jquery' );
-
     });
 
   }
  
+  /**
+   * Description : Build widget form ( Back-End)
+   *
+   * @param:   $instance - array 
+   * 
+   **/
   function form($instance)
   {
     $instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
-    $title = $instance['title'];
+    $title    = $instance['title'];
 ?>
   <p>
       <label for="<?php echo $this->get_field_id('title'); ?>">
@@ -41,13 +52,25 @@ class MXAjaxSearchWidget extends WP_Widget
 <?php
   }
  
+  /**
+   * Description : Update widget form ( Back-End)
+   *
+   * @param :   $instance - array, $old_instance - array 
+   * @return:   $instance - array
+   **/
   function update($new_instance, $old_instance)
   {
-    $instance = $old_instance;
+    $instance          = $old_instance;
     $instance['title'] = $new_instance['title'];
     return $instance;
   }
  
+  /**
+   * Description : Display AJax Widget  ( Front-End)
+   *
+   * @param :   $args - array,  $instance - array
+   * 
+   **/ 
   function widget($args, $instance)
   {
     extract($args, EXTR_SKIP);
@@ -65,22 +88,29 @@ class MXAjaxSearchWidget extends WP_Widget
   }
 
 
+
+  /**
+   * Description : Ajax(Instant) Search 
+   *
+   **/ 
   function ajaxSearch()
   {
     
     $plugin_url = WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__));
     ?>
+    <!-- Instant search form -->
     <div id='mx-ajax-search'>
       <input type='text' name='my-s' id='my-s' />
     </div>
     
+    <!-- Display search results -->
     <div id='results'>
     </div>
     
     <script>
       jQuery('#my-s').keyup(function() {
         jQuery.ajax({
-          'type':   'post',
+          'type':   'get',
           'url' :   '<?php echo $plugin_url.'/ajax/simple-search.php'; ?>',
           'data':   's=' + jQuery('#my-s').val(),
           'success': function (result) {
