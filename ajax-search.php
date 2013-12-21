@@ -4,7 +4,7 @@ Plugin Name: Ajax search
 Plugin URI: http://sandorkovacs84.wordpress.com/
 Description: Search your posts and pages instant. 
 Author: Sandor Kovacs
-Version: 1.0
+Version: 1.1.0
 Author URI: http://sandorkovacs84.wordpress.com/
 */
  
