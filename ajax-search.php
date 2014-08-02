@@ -2,9 +2,9 @@
 /*
 Plugin Name: Ajax search
 Plugin URI: http://sandorkovacs84.wordpress.com/
-Description: Search your posts and pages instant. 
+Description: Search your posts and pages live
 Author: Sandor Kovacs
-Version: 1.0
+Version: 1.1.1
 Author URI: http://sandorkovacs84.wordpress.com/
 */
  
@@ -41,7 +41,7 @@ class MXAjaxSearchWidget extends WP_Widget
 ?>
   <p>
       <label for="<?php echo $this->get_field_id('title'); ?>">
-      Title:
+      <?php _e('Title:') ?>
       <input class="widefat"
              id="<?php echo $this->get_field_id('title'); ?>"
              name="<?php echo $this->get_field_name('title'); ?>"
@@ -100,7 +100,7 @@ class MXAjaxSearchWidget extends WP_Widget
     ?>
     <!-- Instant search form -->
     <div id='mx-ajax-search'>
-      <input type='text' name='my-s' id='my-s' />
+      <input type='text' name='my-s' id='my-s' style="width:100%;"/>
     </div>
     
     <!-- Display search results -->
@@ -111,7 +111,7 @@ class MXAjaxSearchWidget extends WP_Widget
       jQuery('#my-s').keyup(function() {
         jQuery.ajax({
           'type':   'get',
-          'url' :   '<?php echo $plugin_url.'/ajax/simple-search.php'; ?>',
+          'url' :   '<?php echo $plugin_url.'ajax/simple-search.php'; ?>',
           'data':   's=' + jQuery('#my-s').val(),
           'success': function (result) {
             jQuery('#results').html(result);
