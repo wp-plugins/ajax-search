@@ -2,9 +2,9 @@
 /*
 Plugin Name: Ajax search
 Plugin URI: http://sandorkovacs84.wordpress.com/
-Description: Search your posts and pages instant. 
+Description: Search your posts and pages live
 Author: Sandor Kovacs
-Version: 1.1.0
+Version: 1.1.1
 Author URI: http://sandorkovacs84.wordpress.com/
 */
  
@@ -41,7 +41,7 @@ class MXAjaxSearchWidget extends WP_Widget
 ?>
   <p>
       <label for="<?php echo $this->get_field_id('title'); ?>">
-      Title:
+      <?php _e('Title:') ?>
       <input class="widefat"
              id="<?php echo $this->get_field_id('title'); ?>"
              name="<?php echo $this->get_field_name('title'); ?>"

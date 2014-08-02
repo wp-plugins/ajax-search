@@ -3,8 +3,8 @@ Contributors: almos20
 Donate link: http://sandorkovacs84.wordpress.com/
 Tags: ajax search, live search, instant search
 Requires at least: 3.1.0
-Tested up to: 3.8.0
-Stable tag: 1.1.0
+Tested up to: 3.9.1.
+Stable tag: 1.1.1
 
 Ajax Search is a simple instant posts search widget. 
 
@@ -38,6 +38,8 @@ No Screenshots.
 
 == Changelog ==
 
+= 1.1.1 =
+* Test: WordPress 3.9.1
 
 = 1.1.0 =
 * Fix: Show only published posts in result list
