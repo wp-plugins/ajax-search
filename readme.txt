@@ -3,8 +3,8 @@ Contributors: almos20
 Donate link: http://sandorkovacs84.wordpress.com/
 Tags: ajax search, live search, instant search
 Requires at least: 3.1.0
-Tested up to: 3.9.1.
-Stable tag: 1.1.1
+Tested up to: 4.0
+Stable tag: 1.2.1
 
 Ajax Search is a simple instant posts search widget. 
 
@@ -37,6 +37,19 @@ If you have an idea how to solve it easily I will add to this plugin.
 No Screenshots.
 
 == Changelog ==
+
+
+= 1.2.1 =
+* [Test]: WordPress 4.0
+
+= 1.2.0 =
+* New: Remember the last searched string and always display the result
+* Change: Ajax search engine rewritten, now it's using the WP Ajax. 
+* New: Add placeholder for the search input field
+* Change: Perform search if the search string contains at least 2 chars. 
+* Fix: Optimize performance 
+* Test: WordPress 3.9.2
+
 
 = 1.1.1 =
 * Test: WordPress 3.9.1
