@@ -3,8 +3,8 @@ Contributors: almos20
 Donate link: http://sandorkovacs84.wordpress.com/
 Tags: ajax search, live search, instant search
 Requires at least: 3.1.0
-Tested up to: 4.0
-Stable tag: 1.2.1
+Tested up to: 4.2.1
+Stable tag: 1.2.2
 
 Ajax Search is a simple instant posts search widget. 
 
@@ -38,6 +38,9 @@ No Screenshots.
 
 == Changelog ==
 
+
+= 1.2.2 =
+* [Test]: WordPress 4.2.1
 
 = 1.2.1 =
 * [Test]: WordPress 4.0
