@@ -4,7 +4,7 @@
   Plugin URI: http://sandorkovacs84.wordpress.com/
   Description: Search your posts and pages live
   Author: Sandor Kovacs
-  Version: 1.2.1
+  Version: 1.2.2
   Author URI: http://sandorkovacs84.wordpress.com/
  */
 
